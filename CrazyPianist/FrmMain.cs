@@ -28,7 +28,7 @@ namespace CrazyPianist
                 var pArray = new Point[4];
                 var w = rect.Width / 4;
                 for (int i = 0; i < pArray.Length; i++)
-                    pArray[i] = new Point(w / 2 + i * w, rect.Height * 1 / 3);
+                    pArray[i] = new Point(w / 2 + i * w, rect.Height * 2 / 3);
                 while (true)
                 {
                     if (!isRun)
