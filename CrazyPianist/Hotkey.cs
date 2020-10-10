@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace CrazyRestaurant
+namespace CrazyPianist
 {
     public delegate void HotkeyEventHandler(int hotKeyID);
     public class Hotkey : System.Windows.Forms.IMessageFilter
