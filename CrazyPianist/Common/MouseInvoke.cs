@@ -17,12 +17,18 @@ namespace CrazyPianist.Common
         private static readonly int MOUSEEVENTF_MOVE = 0x0001;//模拟鼠标移动
         private static readonly int MOUSEEVENTF_LEFTDOWN = 0x0002;//模拟鼠标左键按下
         private static readonly int MOUSEEVENTF_LEFTUP = 0x0004;//模拟鼠标左键抬起
-        private static readonly int MOUSEEVENTF_RIGHTDOWN = 0x0008; //模拟鼠标右键按下 
-        private static readonly int MOUSEEVENTF_RIGHTUP = 0x0010; //模拟鼠标右键抬起 
-        private static readonly int MOUSEEVENTF_MIDDLEDOWN = 0x0020; //模拟鼠标中键按下 
+        private static readonly int MOUSEEVENTF_RIGHTDOWN = 0x0008; //模拟鼠标右键按下
+        private static readonly int MOUSEEVENTF_RIGHTUP = 0x0010; //模拟鼠标右键抬起
+        private static readonly int MOUSEEVENTF_MIDDLEDOWN = 0x0020; //模拟鼠标中键按下
         private static readonly int MOUSEEVENTF_MIDDLEUP = 0x0040;// 模拟鼠标中键抬起
-        private static readonly int MOUSEEVENTF_WHEEL = 0x0800;// 模拟鼠标中键抬起 
-        private static readonly int MOUSEEVENTF_ABSOLUTE = 0x8000;//鼠标绝对位置   
+        private static readonly int MOUSEEVENTF_WHEEL = 0x0800;// 模拟鼠标中键抬起
+        private static readonly int MOUSEEVENTF_ABSOLUTE = 0x8000;//鼠标绝对位置
+
+        private static readonly int WM_LBUTTONDOWN = 0x0201;//按下鼠标左键
+        private static readonly int WM_LBUTTONUP = 0x0202;//释放鼠标左键
+        private static readonly int MK_LBUTTON = 0x1;//鼠标左键
+
+        static IntPtr appHwnd = IntPtr.Zero;
 
         public static void Move(int x, int y)
         {
@@ -45,11 +51,6 @@ namespace CrazyPianist.Common
             lastMovePosition.Y = y;
         }
 
-        static IntPtr appHwnd = IntPtr.Zero;
-        const int downCode = 0x201;
-        const int upCode = 0x202;
-        const int leftButton = 0x1;
-
         public static void InitApp(IntPtr hWnd)
         {
             appHwnd = hWnd;
@@ -58,8 +59,8 @@ namespace CrazyPianist.Common
         public static void AppClick(int x, int y)
         {
             var lParam = (y << 16) | x;
-            SendMessage(appHwnd, downCode, leftButton, lParam);
-            SendMessage(appHwnd, downCode, 0, lParam);
+            SendMessage(appHwnd, WM_LBUTTONDOWN, MK_LBUTTON, lParam);
+            SendMessage(appHwnd, WM_LBUTTONUP, 0, lParam);
         }
 
         public static void Click()
