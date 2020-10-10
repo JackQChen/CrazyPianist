@@ -60,7 +60,7 @@ namespace CrazyPianist.Common
         {
             var lParam = (y << 16) | x;
             SendMessage(appHwnd, WM_LBUTTONDOWN, MK_LBUTTON, lParam);
-            SendMessage(appHwnd, WM_LBUTTONUP, 0, lParam);
+            //SendMessage(appHwnd, WM_LBUTTONUP, 0, lParam);
         }
 
         public static void Click()
