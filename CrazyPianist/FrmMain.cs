@@ -54,9 +54,15 @@ namespace CrazyPianist
             {
                 var c = AppInvoke.GetColor(pArr[i].X - 10, pArr[i].Y - 10);
                 var isHit = c.R < 50 && c.G < 50 && c.B < 50;
-                g.DrawString(isHit.ToString(), this.Font, Brushes.White, pArr[i].X + 5, pArr[i].Y + 5);
                 if (isHit)
+                {
+                    g.FillEllipse(Brushes.White, pArr[i].X + 5, pArr[i].Y + 5, 10, 10);
                     MouseInvoke.AppClick(pArr[i].X, pArr[i].Y);
+                }
+                else
+                {
+                    g.DrawEllipse(Pens.White, pArr[i].X + 5, pArr[i].Y + 5, 10, 10);
+                }
             }
         }
 
