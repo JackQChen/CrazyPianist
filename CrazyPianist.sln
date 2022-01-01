@@ -7,14 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyPianist", "CrazyPianis
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x86 = Debug|x86
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Debug|x86.ActiveCfg = Debug|x86
-		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Debug|x86.Build.0 = Debug|x86
-		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Release|x86.ActiveCfg = Release|x86
-		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Release|x86.Build.0 = Release|x86
+		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07EB866D-F30C-49A7-BD5E-F5179D276462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
