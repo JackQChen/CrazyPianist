@@ -53,7 +53,6 @@ namespace CrazyPianist.Common
         public static IntPtr Init()
         {
             hWnd = FindWindow(null, "钢琴块2");
-            hWnd = FindWindowEx(hWnd, IntPtr.Zero, null, "");
             hWnd = FindWindowEx(hWnd, IntPtr.Zero, null, "Chrome Legacy Window");
             GetWindowRect(hWnd, out rect);
             Rectangle = new Rectangle(0, 0, rect.Right - rect.Left, rect.Bottom - rect.Top);
