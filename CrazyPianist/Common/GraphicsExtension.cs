@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace CrazyPianist.Common
+﻿namespace CrazyPianist.Common
 {
     public static class GraphicsExtension
     {

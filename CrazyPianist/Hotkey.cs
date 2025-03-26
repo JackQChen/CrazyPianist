@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
+﻿using System.Runtime.InteropServices;
 
 namespace CrazyPianist
 {
     public delegate void HotkeyEventHandler(int hotKeyID);
-    public class Hotkey : System.Windows.Forms.IMessageFilter
+    public class Hotkey : IMessageFilter
     {
         List<UInt32> keyIDs = new List<UInt32>();
         IntPtr hWnd;
