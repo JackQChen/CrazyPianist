@@ -1,9 +1,9 @@
-﻿using System;
+﻿using CrazyPianist.Common;
+using System;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CrazyPianist.Common;
 
 namespace CrazyPianist
 {
