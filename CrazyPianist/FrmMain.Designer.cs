@@ -43,6 +43,7 @@
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(100, 40);
             this.btnRun.TabIndex = 7;
+            this.btnRun.TabStop = false;
             this.btnRun.Text = "启动";
             this.btnRun.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRun.UseVisualStyleBackColor = true;
