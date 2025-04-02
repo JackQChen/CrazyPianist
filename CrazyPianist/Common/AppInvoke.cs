@@ -12,7 +12,7 @@ namespace CrazyPianist.Common
         [DllImport("user32.dll")]
         private static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, string windowTitle);
         [DllImport("user32.dll")]
-        private static extern int GetWindowRect(IntPtr hwnd, out Rect lpRect);
+        private static extern int GetWindowRect(IntPtr hwnd, out RECT lpRect);
         [DllImport("User32.dll")]
         private extern static IntPtr GetDC(IntPtr hWnd);
         [DllImport("user32.dll")]
@@ -38,11 +38,11 @@ namespace CrazyPianist.Common
         private static extern int GetPixel(IntPtr hDC, int x, int y);
 
         static IntPtr hWnd = IntPtr.Zero;
-        static Rect rect = new Rect();
+        static RECT rect = new RECT();
 
         public static Rectangle Rectangle { get; private set; }
 
-        private struct Rect
+        private struct RECT
         {
             internal int Left;
             internal int Top;
